@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ribbon-client
+    
+server:
+  port: 8085
+
+hello:
+  serviceUrl: http://localhost:8081/hello/    
+  

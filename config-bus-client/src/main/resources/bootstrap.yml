@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-bus-client
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: lyf # 远程文件的application名字
+      profile: dev
+      label: master
+    bus:
+      trace:
+        enabled: true
+  # 以下都是默认配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8040

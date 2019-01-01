@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: lyf
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+      label: master
+      
+server:
+   port: 8030
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh # 暴露刷新节点 2.x版本需要手动开启

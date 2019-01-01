@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hystrix-client
+    
+server:
+  port: 8091
+
+feign:
+  hystrix:
+    enabled: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

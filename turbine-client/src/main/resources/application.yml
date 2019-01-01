@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: turbine-client
+    
+server:
+  port: 8020
+  
+turbine:
+  app-config: hystrix-client
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  combine-host-port: true

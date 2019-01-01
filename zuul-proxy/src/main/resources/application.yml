@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zuul-proxy
+
+server:
+  port: 8888
+
+zuul:
+  routes: 
+    a: 
+      path: /a/**
+      url: http://localhost:8091/
+    b:
+      path: /b/**
+      serviceId: hystrix-client
+#  prefix: /api
+#  stripPrefix: false
+  
+
+    

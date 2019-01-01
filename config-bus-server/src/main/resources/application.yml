@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config-bus-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xianghaizing/spring-cloud-learn
+          search-paths: config-repo
+  # 以下都是默认配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+server:
+  port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh # 暴露刷新节点 2.x版本需要手动开启   
+
+
